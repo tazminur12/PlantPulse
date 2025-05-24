@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import 'react-tooltip/dist/react-tooltip.css';
+@import 'react-datepicker/dist/react-datepicker.css';

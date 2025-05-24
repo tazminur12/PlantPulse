@@ -1,0 +1,147 @@
+[
+    {
+      "id": "1",
+      "name": "Monstera Deliciosa",
+      "category": "Tropical",
+      "wateringFrequency": "Weekly",
+      "careLevel": "Easy",
+      "lastWatered": "2023-05-15",
+      "nextWatering": "2023-05-22",
+      "healthStatus": "Thriving",
+      "image": "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb",
+      "description": "Known for its iconic split leaves, Monstera Deliciosa thrives in humid environments and adds a tropical touch to any space."
+    },
+    {
+      "id": "2",
+      "name": "Fiddle Leaf Fig",
+      "category": "Indoor",
+      "wateringFrequency": "Every 5 days",
+      "careLevel": "Moderate",
+      "lastWatered": "2023-05-18",
+      "nextWatering": "2023-05-23",
+      "healthStatus": "Healthy",
+      "image": "https://images.unsplash.com/photo-1603785221084-fb2e4e4b68e3",
+      "description": "Fiddle Leaf Fig is a stylish indoor plant with large violin-shaped leaves. It needs bright, indirect light and consistent watering."
+    },
+    {
+      "id": "3",
+      "name": "Snake Plant",
+      "category": "Succulent",
+      "wateringFrequency": "Every 10 days",
+      "careLevel": "Easy",
+      "lastWatered": "2023-05-12",
+      "nextWatering": "2023-05-22",
+      "healthStatus": "Stable",
+      "image": "https://images.unsplash.com/photo-1587502536263-9298c3e8d742",
+      "description": "Snake Plant is low-maintenance and excellent for beginners. It tolerates low light and requires minimal watering."
+    },
+    {
+      "id": "4",
+      "name": "Peace Lily",
+      "category": "Flowering",
+      "wateringFrequency": "Twice a week",
+      "careLevel": "Moderate",
+      "lastWatered": "2023-05-17",
+      "nextWatering": "2023-05-20",
+      "healthStatus": "Blooming",
+      "image": "https://images.unsplash.com/photo-1570065458221-1ed274bbaedd",
+      "description": "Peace Lily produces elegant white blooms and purifies the air. It enjoys moderate light and evenly moist soil."
+    },
+    {
+      "id": "5",
+      "name": "Bonsai Tree",
+      "category": "Bonsai",
+      "wateringFrequency": "Every 3 days",
+      "careLevel": "Difficult",
+      "lastWatered": "2023-05-19",
+      "nextWatering": "2023-05-22",
+      "healthStatus": "Needs Trimming",
+      "image": "https://images.unsplash.com/photo-1616627984486-d5b93c1c9e34",
+      "description": "Bonsai Tree is a miniature tree requiring detailed pruning and watering. It's a beautiful but demanding decorative plant."
+    },
+    {
+      "id": "6",
+      "name": "Aloe Vera",
+      "category": "Succulent",
+      "wateringFrequency": "Every 2 weeks",
+      "careLevel": "Easy",
+      "lastWatered": "2023-05-10",
+      "nextWatering": "2023-05-24",
+      "healthStatus": "Thriving",
+      "image": "https://images.unsplash.com/photo-1601297128153-12d6aa4fd169",
+      "description": "Aloe Vera is a succulent with soothing gel inside its leaves. It thrives in sunlight and needs infrequent watering."
+    },
+    {
+      "id": "7",
+      "name": "Areca Palm",
+      "category": "Tropical",
+      "wateringFrequency": "Every 3 days",
+      "careLevel": "Moderate",
+      "lastWatered": "2023-05-18",
+      "nextWatering": "2023-05-21",
+      "healthStatus": "Healthy",
+      "image": "https://images.unsplash.com/photo-1587502536405-5c6b6b1f2f0b",
+      "description": "Areca Palm adds a lush, tropical feel to homes. It grows best in bright light and prefers regular watering during warmer months."
+    },
+    {
+      "id": "8",
+      "name": "Rubber Plant",
+      "category": "Indoor",
+      "wateringFrequency": "Weekly",
+      "careLevel": "Easy",
+      "lastWatered": "2023-05-14",
+      "nextWatering": "2023-05-21",
+      "healthStatus": "Growing",
+      "image": "https://images.unsplash.com/photo-1599277437488-77a37d43fc92",
+      "description": "Rubber Plant is a bold houseplant with deep green leaves. It enjoys indirect light and thrives with consistent moisture."
+    },
+    {
+      "id": "9",
+      "name": "Cactus",
+      "category": "Succulent",
+      "wateringFrequency": "Every 2 weeks",
+      "careLevel": "Easy",
+      "lastWatered": "2023-05-01",
+      "nextWatering": "2023-05-15",
+      "healthStatus": "Stable",
+      "image": "https://images.unsplash.com/photo-1562259949-56b8e9637d71",
+      "description": "Cactus stores water in its thick stems and thrives in full sun. It’s perfect for dry climates and infrequent watering."
+    },
+    {
+      "id": "10",
+      "name": "Calathea Orbifolia",
+      "category": "Tropical",
+      "wateringFrequency": "Every 4 days",
+      "careLevel": "Moderate",
+      "lastWatered": "2023-05-16",
+      "nextWatering": "2023-05-20",
+      "healthStatus": "Thriving",
+      "image": "https://images.unsplash.com/photo-1612392061854-557bed5fcac2",
+      "description": "Calathea Orbifolia stands out with large striped leaves. It prefers high humidity and filtered light for healthy growth."
+    },
+    {
+      "id": "11",
+      "name": "Spider Plant",
+      "category": "Indoor",
+      "wateringFrequency": "Every 5 days",
+      "careLevel": "Easy",
+      "lastWatered": "2023-05-17",
+      "nextWatering": "2023-05-22",
+      "healthStatus": "Healthy",
+      "image": "https://images.unsplash.com/photo-1609171524999-4dfbe4d0c4f2",
+      "description": "Spider Plant is a hardy plant that produces offshoots called 'spiderettes'. It grows well in indirect light and is easy to propagate."
+    },
+    {
+      "id": "12",
+      "name": "Jade Plant",
+      "category": "Succulent",
+      "wateringFrequency": "Every 2 weeks",
+      "careLevel": "Easy",
+      "lastWatered": "2023-05-11",
+      "nextWatering": "2023-05-25",
+      "healthStatus": "Thriving",
+      "image": "https://images.unsplash.com/photo-1609171453599-557f8cbbf6be",
+      "description": "Jade Plant symbolizes prosperity and is often used in feng shui. It’s a sun-loving succulent that stores water in its thick leaves."
+    }
+  ]
+  
