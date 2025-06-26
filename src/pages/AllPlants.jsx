@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthProvider';
 import { toast } from 'react-hot-toast';
-import { FaSearch, FaPlus, FaSort, FaEye, FaEdit, FaTrash } from 'react-icons/fa';
+import { FaSearch, FaSort, FaWater, FaSun, FaSeedling } from 'react-icons/fa';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const AllPlants = () => {
@@ -72,19 +72,13 @@ const AllPlants = () => {
   return (
     <div className="container mx-auto px-4 py-8 pt-20">
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-green-800 dark:text-lime-300 mb-4 md:mb-0">
-          All Plants
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-green-800 dark:text-lime-300">
+          Plant Library
         </h1>
-        {user && (
-          <Link
-            to="/add-plant"
-            className="flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
-          >
-            <FaPlus className="mr-2" />
-            Add New Plant
-          </Link>
-        )}
+        <p className="text-gray-600 dark:text-gray-400 mt-2">
+          Browse our collection of plants and find your perfect green companion
+        </p>
       </div>
 
       {/* Search and Sort */}
@@ -122,101 +116,91 @@ const AllPlants = () => {
         </div>
       </div>
 
-      {/* Plants Table */}
+      {/* Plants Grid */}
       {filteredPlants.length === 0 ? (
         <div className="text-center py-12">
           <h2 className="text-xl font-medium text-gray-600 dark:text-gray-400">
             No plants found matching your search
           </h2>
-          {user && (
-            <Link
-              to="/add-plant"
-              className="inline-block mt-4 text-green-600 dark:text-green-400 hover:underline"
-            >
-              Add your first plant
-            </Link>
-          )}
         </div>
       ) : (
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white dark:bg-gray-800 rounded-lg overflow-hidden">
-            <thead className="bg-green-600 dark:bg-green-800 text-white">
-              <tr>
-                <th className="py-3 px-4 text-left">Image</th>
-                <th className="py-3 px-4 text-left">Name</th>
-                <th className="py-3 px-4 text-left">Category</th>
-                <th className="py-3 px-4 text-left">Watering Frequency</th>
-                <th className="py-3 px-4 text-left">Care Level</th>
-                <th className="py-3 px-4 text-left">Next Watering</th>
-                <th className="py-3 px-4 text-left">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-              {filteredPlants.map((plant) => (
-                <tr key={plant._id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                  <td className="py-4 px-4">
-                    <img
-                      src={plant.image}
-                      alt={plant.name}
-                      className="w-12 h-12 object-cover rounded"
-                    />
-                  </td>
-                  <td className="py-4 px-4 font-medium text-gray-900 dark:text-white">
-                    {plant.name}
-                  </td>
-                  <td className="py-4 px-4 text-gray-700 dark:text-gray-300">
-                    {plant.category}
-                  </td>
-                  <td className="py-4 px-4 text-gray-700 dark:text-gray-300">
-                    Every {plant.wateringFrequency} days
-                  </td>
-                  <td className="py-4 px-4">
-                    <span className={`px-2 py-1 rounded-full text-xs ${
-                      plant.careLevel === 'Easy'
-                        ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                        : plant.careLevel === 'Moderate'
-                          ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
-                          : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
-                    }`}>
-                      {plant.careLevel}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredPlants.map((plant) => (
+            <div
+              key={plant._id}
+              className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              {/* Plant Image */}
+              <div className="h-48 bg-gray-100 dark:bg-gray-600 overflow-hidden">
+                <img
+                  src={plant.image || '/default-plant.jpg'}
+                  alt={`Image of ${plant.name || 'Unnamed Plant'}`}
+                  title={plant.name || 'Unnamed Plant'}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = '/default-plant.jpg';
+                  }}
+                />
+              </div>
+
+              {/* Plant Info */}
+              <div className="p-4">
+                {/* Name */}
+                <h3 className="text-xl font-semibold text-green-800 dark:text-lime-300 mb-2 truncate">
+                  {plant.name || 'Unnamed Plant'}
+                </h3>
+
+                {/* Category Badge */}
+                {plant.category && (
+                  <div className="flex items-center text-sm text-gray-600 dark:text-gray-300 mb-2">
+                    <span className="bg-green-100 dark:bg-gray-600 text-green-800 dark:text-green-300 px-2 py-1 rounded-full text-xs">
+                      {plant.category}
                     </span>
-                  </td>
-                  <td className="py-4 px-4 text-gray-700 dark:text-gray-300">
-                    {new Date(plant.nextWatering).toLocaleDateString()}
-                  </td>
-                  <td className="py-4 px-4">
-                    <div className="flex space-x-2">
-                      <Link
-                        to={`/plants/${plant._id}`}
-                        className="p-2 text-green-600 hover:text-green-800 dark:text-green-400 dark:hover:text-green-300"
-                        title="View Details"
-                      >
-                        <FaEye />
-                      </Link>
-                      {user?.email === plant.userEmail && (
-                        <>
-                          <Link
-                            to={`/update-plant/${plant._id}`}
-                            className="p-2 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-                            title="Edit"
-                          >
-                            <FaEdit />
-                          </Link>
-                          <button
-                            onClick={() => toast.error('Delete functionality not implemented yet')}
-                            className="p-2 text-red-600 hover:text-red-800 dark:text-red-400 dark:hover:text-red-300"
-                            title="Delete"
-                          >
-                            <FaTrash />
-                          </button>
-                        </>
-                      )}
+                  </div>
+                )}
+
+                {/* Plant Meta Info */}
+                <div className="space-y-2 text-sm">
+                  {plant.wateringFrequency && (
+                    <div className="flex items-center">
+                      <FaWater className="text-blue-500 mr-2" />
+                      <span className="text-gray-700 dark:text-gray-300">
+                        Water every {plant.wateringFrequency} days
+                      </span>
                     </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  )}
+
+                  {plant.careLevel && (
+                    <div className="flex items-center">
+                      <FaSun className="text-yellow-500 mr-2" />
+                      <span className="text-gray-700 dark:text-gray-300">
+                        {plant.careLevel} care
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="flex items-center">
+                    <FaSeedling className="text-green-500 mr-2" />
+                    <span className="text-gray-700 dark:text-gray-300">
+                      Next watering:{' '}
+                      {plant.nextWatering
+                        ? new Date(plant.nextWatering).toLocaleDateString()
+                        : 'N/A'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* View Details Link */}
+                <Link
+                  to={`/plants/${plant._id}`}
+                  className="inline-block mt-4 text-green-600 dark:text-green-400 hover:underline text-sm font-medium"
+                >
+                  View Details →
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </div>
