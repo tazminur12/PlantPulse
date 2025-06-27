@@ -10,7 +10,7 @@
 [![Database](https://img.shields.io/badge/Database-MongoDB-yellowgreen)](https://www.mongodb.com)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-## Backend Repositories--- https://github.com/Programming-Hero-Web-Course4/b11a10-client-side-tazminur12
+## Backend Repositories--- https://github.com/tazminur12/plant-pulse-server
 
 ## ✨ Features
 
