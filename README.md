@@ -45,7 +45,7 @@
 
 | Dashboard | Plant Details | Reminders |
 |-----------|--------------|-----------|
-| ![Dashboard]([https://i.ibb.co/RV4ZqFK/Health-Getty-Images-1475314230-068b30b5f380418b89350af13bdb111c.jpg](https://i.ibb.co/M5fj06Wy/Screenshot-2025-06-27-at-2-16-41-PM.png)) | ![Plant Details](https://i.ibb.co/tTgqBdwp/Screenshot-2025-06-27-at-2-17-08-PM.png) | ![Reminders](https://i.ibb.co/xtdLx1GX/Screenshot-2025-06-27-at-2-18-52-PM.png) |
+| ![Dashboard](https://i.ibb.co/M5fj06Wy/Screenshot-2025-06-27-at-2-16-41-PM.png) | ![Plant Details](https://i.ibb.co/tTgqBdwp/Screenshot-2025-06-27-at-2-17-08-PM.png) | ![Reminders](https://i.ibb.co/xtdLx1GX/Screenshot-2025-06-27-at-2-18-52-PM.png) |
 
 ## 🛠️ Installation
 
